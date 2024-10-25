@@ -1,6 +1,43 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
-Придерживайтесь такого именования классов:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
-*/
+:root.theme-light {
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
+  --text-color: #000;
+  --bg-color: #fff;
+  --hover-text-color: #fff;
+  --line-color: #d3d3d3;
+  --gradient-start: #e7e7e7;
+  --gradient-end: #1a1a1a;
+  --btn-text-color: #fff;
+  --spark-color: #ff0000;
+  --color-body-heart-animation: #ff0000;
+}
+
+:root.theme-dark {
+  --main-font-weight: 465;
+  --accent-font-weight: 785;
+  --text-color: #00cc14;
+  --bg-color: #000;
+  --hover-text-color: #000;
+  --line-color: #000;
+  --gradient-start: #007f0c;
+  --gradient-end: #004306;
+  --btn-text-color: #00cc14;
+  --spark-color: #ff0000;
+  --color-body-heart-animation: #ff0000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font-weight: 465;
+    --accent-font-weight: 785;
+    --text-color: #00cc14;
+    --bg-color: #000;
+    --hover-text-color: #000;
+    --line-color: #000;
+    --color-gradient-start: #007f0c;
+    --color-gradient-end: #004306;
+    --btn-text-color: #00cc14;
+    --spark-color: #ff0000;
+    --color-body-heart-animation: #ff0000;
+  }
+}

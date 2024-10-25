@@ -12,3 +12,117 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+.like-icon:hover .core {
+  fill: var(--text-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--text-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.card__icon-button:active .like-icon .main-body {
+  fill: var(--color-body-heart-animation);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.card__icon-button:active .like-icon .core {
+  fill: var(--color-body-heart-animation);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--color-body-heart-animation);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--color-body-heart-animation);
+  transition: fill 0.3s ease 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--color-body-heart-animation);
+  transition: fill 0.3s linear 0.06s;
+}
+
+@keyframes scale-heart {
+  from {
+    transform-origin: center;
+    scale: 1;
+  }
+
+  to {
+    transform-origin: center;
+    scale: 1.22;
+  }
+}
+
+.like-icon.is-liked .heart {
+  animation: scale-heart 0.3s ease-in 0.1s 1 alternate;
+}
+
+@keyframes sparkle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparkle 0.3s ease-in 0.3s 1 alternate;
+}
+
+.like-icon:not(.is-liked) .contour {
+  fill: var(--text-color);
+  transition: fill 0.1s linear;
+}
+
+/* @keyframes для theme-menu__button */
+
+@keyframes arrowMove {
+  0% {
+    transform: translateY(-50%) translateX(0);
+  }
+  100% {
+    transform: translateY(-50%) translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .theme-menu__button:disabled::before {
+    animation: none !important;
+  }
+
+  .content__button::before {
+    animation: none;
+    transition: none;
+  }
+
+  .content__button:hover::before {
+    transform: none;
+  }
+}
