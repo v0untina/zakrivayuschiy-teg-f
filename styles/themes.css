@@ -41,3 +41,20 @@
     --color-body-heart-animation: #ff0000;
   }
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-font-weight: 400;
+    --accent-font-weight: 700;
+    --text-color: #000;
+    --bg-color: #fff;
+    --hover-text-color: #fff;
+    --line-color: #d3d3d3;
+    --gradient-start: #e7e7e7;
+    --gradient-end: #1a1a1a;
+    --btn-text-color: #fff;
+    --spark-color: #ff0000;
+    --color-body-heart-animation: #ff0000;
+  }
+}
+
