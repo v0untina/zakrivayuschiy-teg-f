@@ -408,7 +408,7 @@
 
 @media (width <= 450px) {
 
-  .content__button{
+  .content__button {
     flex-direction: column;
   }
 
@@ -420,17 +420,17 @@
     font-size: 14px;
   }
 
-  .card_image{
+  .card_image {
     height: 375px;
     width: 100%;
   }
 
-  .icon{
+  .icon {
     width: 28px;
     height: 28px;
   }
 
-  .emblema{
+  .emblema {
     top: 25px;
     right: 11px;
     font-size: 15px;
